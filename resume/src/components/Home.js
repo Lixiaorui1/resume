@@ -9,14 +9,11 @@ class Home extends Component {
 
   	}
   }
-   componentDidMount() {
-
-	}
-    render() {
+  render() {
   	
     return (
       <div >
-      	<Button type="primary">default</Button>
+      	首页
       </div>
     );
   }

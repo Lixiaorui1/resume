@@ -1,0 +1,21 @@
+.bottom-nav{
+	height: 0.5rem;
+	background: #282828;
+	border-top: 1px solid #222;
+  	box-shadow: 0 1px 1px #363636 inset;
+  	display: flex;
+  	justify-content: space-between;
+  	text-align: center;
+  	color: #ccc;
+}
+.bottom-nav li{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	height: 100%;
+	box-sizing: border-box;
+	padding: 0.05rem;
+}
+.option{
+	flex: 1;
+}
