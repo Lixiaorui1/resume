@@ -1,17 +1,19 @@
 import React, { Component } from 'react';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
 import { Drawer, NavBar, Icon } from 'antd-mobile';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import "./style/App.css";
 import "./style/reset.css";
-import Home from './components/Home';
+import Resume from './components/Resume';
+import Job from './components/Job';
+import Project from './components/Project';
+import Photo from './components/Photo';
 import BottomNav from './components/BottomNav';
 
 class App extends Component {
   constructor (props) {
     super (props);
     this.state = {
-       open: true,
+       open: false,
     }
     this.onOpenChange = this.onOpenChange.bind(this);
   }
@@ -21,19 +23,36 @@ class App extends Component {
   }
 
   render() {
+    const sidebar = (
+      <div className="side" >
+        <p className="first">江 山 看 不 尽</p>
+        <p className="second">最 美 镜 中 人</p>
+      </div>
+    )
+
     return (
      <Router>
       	<div className="App">
           <NavBar icon={<Icon type="ellipsis" />} onLeftClick={this.onOpenChange} style={{background:"#282828"}} >My Resume</NavBar>
           <div className="content">
-            <div className="mark" style={{display: this.state.open ? "block" : "none"}} onClick={this.onOpenChange}></div>\
-            <div className="side" style={{left: this.state.open ? 0 : "-10rem"}}>
-              <p className="first">江山看不尽</p>
-              <p className="second">最美镜中人</p>
-            </div>
-            <Route exact path="/" component={Home} />
+            <Drawer
+              className="my-drawer"
+              style={{ minHeight: "100%" }}
+              enableDragHandle
+              sidebar={sidebar}
+              open={this.state.open}
+              onOpenChange={this.onOpenChange}
+            >
+              <div style={{flex: 1}}>
+                <Route path="/resume" component={Resume} />
+                <Route path="/job" component={Job} />
+                <Route path="/project" component={Project} />
+                <Route path="/photo" component={Photo} />
+              </div>
+              <BottomNav />
+            </Drawer>
           </div>
-          <BottomNav />
+          
         </div>
      </Router>
     );

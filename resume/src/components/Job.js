@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { Button } from 'antd-mobile';
+// import {  } from 'antd-mobile';
 
 
-class Home extends Component {
+class Job extends Component {
   constructor (props) {
   	super (props);
   	this.state = {
@@ -13,10 +13,10 @@ class Home extends Component {
   	
     return (
       <div >
-      	首页
+      	工作
       </div>
     );
   }
 }
 
-export default Home;
+export default Job;
