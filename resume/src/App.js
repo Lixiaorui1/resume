@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {BrowserRouter as Router, Route} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Redirect} from 'react-router-dom';
 import { Drawer, NavBar, Icon } from 'antd-mobile';
 import "./style/App.css";
 import "./style/reset.css";
@@ -33,17 +33,17 @@ class App extends Component {
     return (
      <Router>
       	<div className="App">
-          <NavBar icon={<Icon type="ellipsis" />} onLeftClick={this.onOpenChange} style={{background:"#282828"}} >My Resume</NavBar>
+          <NavBar icon={<Icon type="ellipsis" />} onLeftClick={this.onOpenChange} style={{background:"#282828"}} >24K超帅</NavBar>
           <div className="content">
             <Drawer
               className="my-drawer"
               style={{ minHeight: "100%" }}
-              enableDragHandle
               sidebar={sidebar}
               open={this.state.open}
               onOpenChange={this.onOpenChange}
             >
               <div style={{flex: 1}}>
+                <Redirect from='/' to='/resume'/>
                 <Route path="/resume" component={Resume} />
                 <Route path="/job" component={Job} />
                 <Route path="/project" component={Project} />

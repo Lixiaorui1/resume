@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "antd-mobile": "^2.1.9",
+    "axios": "^0.18.0",
     "babel-plugin-import": "^1.7.0",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
@@ -19,5 +20,11 @@
   "devDependencies": {
     "babel-plugin-import": "^1.7.0",
     "react-app-rewired": "^1.5.2"
+  },
+  "proxy": {
+    "/v4": {
+      "target": "https://m.maizuo.com",
+      "changeOrigin": true
+    }
   }
 }
