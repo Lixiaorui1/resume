@@ -25,6 +25,14 @@
     "/v4": {
       "target": "https://m.maizuo.com",
       "changeOrigin": true
+    },
+    "api": {
+      "target": "https://pan.baidu.com",
+      "changeOrigin": true
+    },
+    "webapp": {
+      "target": "https://h5.qzone.qq.com",
+      "changeOrigin": true
     }
   }
 }

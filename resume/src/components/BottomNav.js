@@ -4,9 +4,6 @@ import "../iconfont/iconfont.css";
 import {NavLink} from 'react-router-dom'
 
 class BottomNav extends Component {
-	constructor(props) {
-		super(props);
-	}
 
 	render() {
 		return (

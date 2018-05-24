@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {BrowserRouter as Router, Route, Redirect} from 'react-router-dom';
+import {HashRouter as Router, Route, Redirect, Switch} from 'react-router-dom';
 import { Drawer, NavBar, Icon } from 'antd-mobile';
 import "./style/App.css";
 import "./style/reset.css";
@@ -43,16 +43,18 @@ class App extends Component {
               onOpenChange={this.onOpenChange}
             >
               <div style={{flex: 1}}>
-                <Redirect from='/' to='/resume'/>
-                <Route path="/resume" component={Resume} />
-                <Route path="/job" component={Job} />
-                <Route path="/project" component={Project} />
-                <Route path="/photo" component={Photo} />
+	              <Switch>
+	                <Route path="/resume" component={Resume} />
+	                <Route path="/job" component={Job} />
+	                <Route path="/project" component={Project} />
+	                <Route path="/photo" component={Photo} />
+	                <Redirect from='/' to='/resume'/>
+	              </Switch>
               </div>
-              <BottomNav />
+              
             </Drawer>
           </div>
-          
+          <BottomNav />
         </div>
      </Router>
     );

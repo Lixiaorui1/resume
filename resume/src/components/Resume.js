@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import "../style/Resume.css";
-import { Carousel, WingBlank } from 'antd-mobile';
+import { Carousel } from 'antd-mobile';
 import axios from 'axios';
 
 

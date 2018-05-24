@@ -1,0 +1,15 @@
+/*img{
+	width: 30%;
+	padding: 0 0.05rem;
+}*/
+.photo ul{
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+.photo ul li{
+	width: 32%;
+}
+.photo ul img{
+	width: 100%;
+}
