@@ -7,10 +7,12 @@
   flex: 1;
   overflow-y: scroll;
   position: relative;
+  background: #e4e7ea;
 }
 html,body,#root{
   height: 100%;
 }
+
 .side{
   writing-mode: vertical-rl;
   height: 100%;
@@ -21,7 +23,7 @@ html,body,#root{
   position: absolute;
   left: 0;
   color: #282828;
-  font-size: 60px;
+  font-size: 54px;
   text-shadow: 0 0 4px white,    
                0 -5px 4px #ff3,   
                3px -10px 6px #fd3,    

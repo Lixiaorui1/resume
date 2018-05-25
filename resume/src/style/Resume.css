@@ -12,3 +12,41 @@
 	display: flex;
 	justify-content: space-around;
 }
+.resume-message{
+	box-sizing: border-box;
+	width: 100%;
+	padding: 0.15rem 0.15rem 0 0.15rem;
+
+}
+.resume-card{
+	box-sizing: border-box;
+	width: 100%;
+	padding: 0.1rem;
+	background: #fff;
+	box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+	margin-bottom: 0.15rem;
+	border-radius: 0.04rem;
+}
+.resume-title{
+	line-height: 0.25rem;
+	color: #fff;
+	border-bottom: 1px solid #ccc;
+	font-size: 16px;
+	position: relative;
+	height: 0.2rem;
+}
+.resume-title span {
+	background: #108ee9;
+	padding: 0 0.1rem;
+	height: 0.25rem;
+	position: absolute;
+	top: -0.05rem;
+	border-radius: 0.1rem 0 0 0.04rem;
+	width: 1rem;
+}
+.resume-card li{
+	line-height: 0.3rem
+}
+.resume-card li p{
+	font-size: 14px;
+}

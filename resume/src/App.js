@@ -33,7 +33,7 @@ class App extends Component {
     return (
      <Router>
       	<div className="App">
-          <NavBar icon={<Icon type="ellipsis" />} onLeftClick={this.onOpenChange} style={{background:"#282828"}} >24K超帅</NavBar>
+          <NavBar icon={<Icon type="ellipsis" />} onLeftClick={this.onOpenChange} style={{background:"#282828"}} >这只是一个演习</NavBar>
           <div className="content">
             <Drawer
               className="my-drawer"
