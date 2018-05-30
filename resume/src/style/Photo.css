@@ -6,10 +6,27 @@
 	display: flex;
 	justify-content: space-around;
 	flex-wrap: wrap;
+	padding: 0.1rem;
 }
 .photo ul li{
-	width: 32%;
+	width: 30%;
+	text-align: center;
+	box-sizing: border-box;
+	height: 0.3rem;
+	border: 1px solid #0F0202;
+	line-height: 0.3rem;
+	margin-bottom: 0.1rem;
+}
+.normal{
+	background: #B7ACAC;
+
+}
+.light{
+	background: #F9F21E;
 }
 .photo ul img{
 	width: 100%;
+}
+.photo .button{
+	padding: 0.1rem;
 }

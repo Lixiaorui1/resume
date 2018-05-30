@@ -62,7 +62,6 @@ class Resume extends Component {
   }
 
   render() {
-    console.log(this.state.data[0]["姓名"])
     return (
       <div className="resume">
       	<div className="banner">
@@ -107,7 +106,6 @@ class Resume extends Component {
                     if(/；/g.test(value[item])){
                        flag = true;
                     }
-                    console.log(flag)
                     return (
                       <li key={num} style={{overflow: 'hidden'}}>
                         <p style={{float: "left",color: '#9a9a9a',fontSize: '12px',width: flag ? '100%' : ''}}>{item}:</p>
